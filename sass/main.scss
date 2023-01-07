@@ -1,0 +1,36 @@
+@import './home';
+@import './base';
+
+// home page components
+
+@import './components/home/navbar';
+@import './components/home/hero-section';
+@import './components/home/product';
+@import './components/home/banner';
+@import './components/home/trend';
+@import './components/home/discount';
+@import './components/home/services';
+@import './components/home/insta-img';
+@import './components/home/footer';
+
+// shop page
+
+@import './components/shop/shop-section';
+
+// page pages
+
+@import './components/pages/product-details';
+@import './components/pages/product-tab';
+@import './components/pages/product-related';
+@import './components/pages/product-cart';
+@import './components/pages/checkout-form';
+@import './components/pages/blog-detials';
+@import './components/pages/detials-content';
+
+// blog page
+
+@import './components/blogs/blog-grid';
+
+// contact page
+
+@import './components/contact/contact-form';

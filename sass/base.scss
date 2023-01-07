@@ -1,0 +1,128 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    border: 0 solid transparent;
+    scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+}
+
+// remove all animations, transitions and smooth scroll for people that prefer not to see them
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+// reset list style
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+// ul li {
+//     list-style: none;
+//     display: none;
+
+// }
+
+// reset anchor style
+a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    // list-style: none;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+// inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+// prevent iOS font size change
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    // font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    // @media only screen and (max-width: 1200px) {
+    //     font-size: 50%;
+    // }
+}
+
+:root {
+
+    --clr-primary-1: #343a40;
+    --clr-primary-2: #888888;
+    --clr-primary-3: #666666;
+    --clr-primary-4: #444444;
+    --clr-primary-5: #B1B0B0;
+    --clr-primary-6: #f2f2f2;
+    --clr-primary-7: #f4f4f4;
+    --clr-primary-8: #e1e1e1;
+    --clr-primary-9: #ffffff;
+    --clr-black: #111111;
+    --bg-color: #212529;
+    --bg-btn: #CA1515;
+    --clr-green: #36A300;
+    --product-color-1: #E31E2f;
+    --product-color-2: #E4AA8B;
+    --yellow-clg: #e3c01c;
+
+    --max-width: 1170px;
+    --box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+
+    // font family
+
+    --ff-Cookie: 'Cookie', cursive;
+    --ff-Mont: 'Montserrat', sans-serif;
+
+
+}
