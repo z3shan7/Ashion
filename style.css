@@ -284,6 +284,9 @@ header {
   .navbar__ham-menu {
     display: none; }
 
+.sideNav {
+  display: none; }
+
 @media screen and (max-width: 1045px) {
   .navbar__list {
     display: none; }
@@ -301,6 +304,7 @@ header {
     border-radius: 2px;
     cursor: pointer; }
   .sideNav {
+    display: block;
     min-height: 100vh;
     position: fixed;
     left: 0;
@@ -365,6 +369,9 @@ header {
       background-color: var(--clr-primary-6);
       cursor: pointer;
       color: #080808; }
+    .sideNav__arrow-right {
+      transform: rotate(150deg);
+      width: 10px; }
     .sideNav__sign-up {
       padding-top: .5rem; }
     .sideNav__sign-up-links {
