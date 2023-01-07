@@ -19,6 +19,9 @@ body {
 .pd-sm {
   padding: 3rem 0; }
 
+.pb-sm {
+  padding-bottom: 2rem; }
+
 .text-center {
   text-align: center; }
 
@@ -241,14 +244,15 @@ header {
   .navbar__drop-down-list {
     display: flex;
     flex-direction: column;
+    gap: 10px;
     position: absolute;
     background-color: #111111;
     color: #ffffff;
     padding: 18px 20px;
     top: 70px;
-    opacity: 0;
     transform: translateY(30px);
-    transition: all 400ms ease; }
+    transition: all 400ms ease;
+    opacity: 0; }
   .navbar__drop-down-list.show-list {
     opacity: 1;
     transform: translateY(0); }
@@ -295,4 +299,80 @@ header {
     text-align: center;
     border: 1px solid #323232;
     border-radius: 2px;
+    cursor: pointer; }
+  .sideNav {
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    background-color: #f2f2f2;
+    overflow-y: auto;
+    padding: 1.5rem;
+    transform: translateX(-100%);
+    transition: 0.5s ease-in; }
+    .sideNav__closeNav {
+      text-align: right; }
+    .sideNav__icons {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      align-items: center; }
+    .sideNav__menu {
+      background-color: #4c4c4c;
+      color: #fff;
+      padding: 1rem 1rem;
+      border-radius: 5px; }
+    .sideNav__btn {
+      border-radius: 4px;
+      background-color: #222;
+      padding: 0.438em 0.625em; }
+    .sideNav__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-top: 2rem;
+      display: none;
+      transition: all 400ms ease-in; }
+    .sideNav__list.show-list {
+      display: flex; }
+    .sideNav__links {
+      padding: .1rem .2rem;
+      display: block;
+      border-radius: 5px; }
+    .sideNav__links:hover {
+      background-color: var(--clr-primary-6);
+      cursor: pointer;
+      color: #080808; }
+    .sideNav__links i {
+      font-size: 12px;
+      padding-left: .5rem; }
+    .sideNav__drop-down-list {
+      display: flex;
+      flex-direction: column;
+      padding-left: 1.5rem;
+      gap: 5px;
+      padding-top: 10px;
+      display: none; }
+    .sideNav__drop-down-list.show-sub-links {
+      display: flex; }
+    .sideNav__sub-links {
+      display: block;
+      border-radius: 5px;
+      font-size: 14px; }
+    .sideNav__sub-links:hover {
+      background-color: var(--clr-primary-6);
+      cursor: pointer;
+      color: #080808; }
+    .sideNav__sign-up {
+      padding-top: .5rem; }
+    .sideNav__sign-up-links {
+      color: #111111;
+      font-weight: 500;
+      font-size: 15px; }
+  .sideNav.show-sideNav {
+    transform: translateX(0); }
+  .fa-circle-xmark {
+    font-size: 35px;
     cursor: pointer; } }
