@@ -30,9 +30,17 @@ body {
 }
 
 .pb-sm {
-    padding-bottom: 2rem;
+    padding-bottom: 1.2rem;
 
 
+}
+
+.pb-xsm {
+    padding-bottom: .8rem;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
 }
 
 .text-center {
@@ -70,6 +78,7 @@ body {
 .heading-5 {
     font-size: 14px;
     color: var(--clr-primary-3);
+    font-size: clamp(12px, 4vw, 14px);
 }
 
 .heading-5-dark {

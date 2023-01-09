@@ -160,6 +160,7 @@ header {
         padding: 1.5rem;
         transform: translateX(-100%);
         transition: 0.5s ease-in;
+        z-index: 1000;
 
         &__closeNav {
             text-align: right;
