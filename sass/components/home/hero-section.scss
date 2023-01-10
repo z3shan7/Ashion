@@ -4,37 +4,28 @@
     &__content {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 16.4vw);
+        grid-template-rows: 16.5vw;
         gap: 10px;
-        // height: 30vh;
     }
 
-    // &__section-1 {
-    //     flex-basis: 50%;
-    // }
 
-    // &__section-2 {
-    //     flex-basis: 25%;
-    //     display: flex;
-    //     flex-wrap: wrap;
-    // }
 
-    // &__section-3 {
-    //     flex-basis: 25%;
-    // }
+    &__col {
+        position: relative;
+
+    }
 
     &__imgs {
         width: 100%;
         height: 100%;
         display: block;
         object-fit: cover;
-        position: relative;
 
     }
 
     &__caption {
         position: absolute;
-        top: 30%;
+        top: 25%;
         left: 40px;
     }
 
@@ -44,63 +35,94 @@
     }
 
     &__header {
-        font-size: clamp(2.9rem, 4vw, 5rem);
-        // font-size: 70px;
+        // font-size: clamp(2.9rem, 4vw, 5rem);
+        font-size: 70px;
         font-family: var(--ff-Cookie);
         color: var(--clr-black);
         font-weight: 400;
     }
 
     &__heading {
-        font-size: clamp(14px, 4vw, 24px) !important;
-
+        font-size: 1.5rem;
     }
 
     &__imgs--1 {
 
-        grid-column: 1/3;
-        grid-row: 1/3;
+        grid-column: span 2;
+        grid-row: span 2;
+
+
+
+    }
+}
+
+
+@media screen and (max-width:1045px) {
+    .hero-section {
+
+        &__content {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+
+        }
+
+        // 
 
 
     }
 
-    &__imgs--2 {
-        grid-column: 3/4;
 
-    }
+}
 
-    &__imgs--3 {
-        grid-column: 4/5;
+@media screen and (max-width:845px) {
+    .hero-section {
+        &__content {
+            grid-template-columns: auto;
+            grid-template-rows: auto;
 
-    }
-
-    &__imgs--4 {
-        grid-column: 3/4;
-        grid-row: 2/3;
-
-    }
-
-    &__imgs--5 {
-        grid-column: 4/5;
-        grid-row: 2/3;
+        }
 
     }
 
 }
 
-@media screen and (max-width:1036px) {
+@media screen and (max-width:575px) {
     .hero-section {
-
         &__content {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(auto, 16.4vw);
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+
         }
 
-        &__imgs--1 {
-
-            grid-column: 1/span 4;
-            // grid-row: 1/3;
+        &__header {
+            font-size: 35px;
         }
+
+        &__imgs--2 {
+            grid-column: 1/ span 2;
+            //     grid-row: 3/4;
+
+        }
+
+        &__imgs--3 {
+            grid-column: 1 / span 2;
+            //     grid-row: 3/4;
+
+        }
+
+        &__imgs--4 {
+            grid-column: 1 / span 2;
+            //     grid-row: 4/5;
+
+        }
+
+        &__imgs--5 {
+            grid-column: 1 / span 2;
+            //     grid-row: 4/5;
+
+        }
+
 
     }
+
 }

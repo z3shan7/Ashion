@@ -78,7 +78,8 @@ body {
 .heading-5 {
     font-size: 14px;
     color: var(--clr-primary-3);
-    font-size: clamp(12px, 4vw, 14px);
+    // padding-bottom: 2rem;
+    // font-size: clamp(12px, 4vw, 14px);
 }
 
 .heading-5-dark {
@@ -176,6 +177,15 @@ body {
     .paragraph-1 {
         font-size: 12px;
 
+    }
+
+    .heading-5 {
+        font-size: 12px;
+
+    }
+
+    .show-now_link {
+        font-size: 12px;
     }
 
 
