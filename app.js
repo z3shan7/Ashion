@@ -27,7 +27,7 @@ const closeIcon = document.getElementById('close-icon')
 const sideNav = document.querySelector('.sideNav')
 
 
-console.log(sideNav)
+// console.log(sideNav)
 
 sideNavBtn.addEventListener('click', () => {
     sideNavList.classList.toggle('show-list')
@@ -39,7 +39,7 @@ OpenSubLinks.addEventListener('click', () => {
 })
 
 openIcon.addEventListener('click', () => {
-    sideNav.classList.add('show-sideNav')
+    sideNav.classList.toggle('show-sideNav')
 
 
 })
@@ -47,4 +47,24 @@ closeIcon.addEventListener('click', () => {
     sideNav.classList.remove('show-sideNav')
 
 
+})
+// open close search bar
+
+const closeBar = document.querySelector('.navbar__searchBar-close')
+// const searchIcon = document.getElementById('search-icon')
+const searchIcon = document.querySelector('.navbar__sign-up-links')
+const searchOverlay = document.querySelector('.navbar__searchBar-overlay')
+
+
+console.log(searchIcon)
+
+searchIcon.addEventListener('click', () => {
+
+    // console.log(e.currentTarget)
+    console.log('first')
+
+})
+
+closeBar.addEventListener('click', () => {
+    console.log('close')
 })
