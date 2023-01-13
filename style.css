@@ -19,6 +19,9 @@ body {
 .pd-sm {
   padding: 3rem 0; }
 
+.padding-b-md {
+  padding-bottom: 1.8rem; }
+
 .pb-sm {
   padding-bottom: 1.2rem; }
 
@@ -33,6 +36,9 @@ body {
 
 .text-white {
   color: #FFF !important; }
+
+.text-bold-600 {
+  font-weight: 600; }
 
 .heading-1 {
   font-size: 24px;
@@ -82,6 +88,9 @@ body {
   height: 2px;
   width: 100%;
   background: #ca1515; }
+
+.text-uppercase {
+  text-transform: uppercase; }
 
 .icon::before {
   position: absolute;
@@ -483,3 +492,55 @@ header {
     grid-column: 1 / span 2; }
   .hero-section__imgs--5 {
     grid-column: 1 / span 2; } }
+
+.product__header {
+  display: flex;
+  justify-content: space-between; }
+
+.product__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none; }
+
+.product__gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 25px;
+  row-gap: 35px; }
+
+.product__rows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+
+.product__rows:nth-child(1) img {
+  position: relative; }
+
+.product__rows:nth-child(1) img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  color: red;
+  width: 100px;
+  height: 100px;
+  background-color: red; }
+
+.product__text {
+  padding-top: 1.2rem; }
+
+.product__icon {
+  font-size: 10px;
+  color: var(--yellow-clg);
+  margin-right: -4px; }
+
+.banner {
+  background-image: url(/Ashion-Images/banner-1.jpg);
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%; }

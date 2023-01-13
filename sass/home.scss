@@ -29,6 +29,10 @@ body {
 
 }
 
+.padding-b-md {
+    padding-bottom: 1.8rem;
+}
+
 .pb-sm {
     padding-bottom: 1.2rem;
 
@@ -49,6 +53,10 @@ body {
 
 .text-white {
     color: #FFF !important;
+}
+
+.text-bold-600 {
+    font-weight: 600;
 }
 
 .heading-1 {
@@ -111,6 +119,10 @@ body {
     height: 2px;
     width: 100%;
     background: #ca1515;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
 }
 
 
