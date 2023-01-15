@@ -68,3 +68,70 @@ searchIcon.addEventListener('click', () => {
 closeBar.addEventListener('click', () => {
     console.log('close')
 })
+
+const product = [
+    {
+        id: 0,
+        productImg: './Ashion-Images/product-1.jpg',
+        productHeader: 'Buttons tweed blazer',
+        starIcon: './Ashion-Images/star-solid.svg',
+        productPrice: '$59.0',
+        category: 'women'
+    },
+    {
+        id: 1,
+        productImg: './Ashion-Images/product-2.jpg',
+        productHeader: 'Buttons tweed blazer',
+        starIcon: './Ashion-Images/star-solid.svg',
+        productPrice: '$49.0',
+        category: 'men'
+    },
+    {
+        id: 2,
+        productImg: './Ashion-Images/product-3.jpg',
+        productHeader: 'Buttons tweed blazer',
+        starIcon: './Ashion-Images/star-solid.svg',
+        productPrice: '$59.0',
+        category: 'women'
+    },
+    {
+        id: 3,
+        productImg: './Ashion-Images/product-4.jpg',
+        productHeader: 'Buttons tweed blazer',
+        starIcon: './Ashion-Images/star-solid.svg',
+        productPrice: '$59.0',
+        category: 'men'
+    },
+    {
+        id: 4,
+        productImg: './Ashion-Images/product-5.jpg',
+        productHeader: 'Buttons tweed blazer',
+        starIcon: './Ashion-Images/star-solid.svg',
+        productPrice: '$59.0',
+        category: 'men'
+    },
+    {
+        id: 5,
+        productImg: './Ashion-Images/product-6.jpg',
+        productHeader: 'Buttons tweed blazer',
+        starIcon: './Ashion-Images/star-solid.svg',
+        productPrice: '$49.0',
+        category: 'women'
+    },
+    {
+        id: 6,
+        productImg: './Ashion-Images/product-7.jpg',
+        productHeader: 'Buttons tweed blazer',
+        starIcon: './Ashion-Images/star-solid.svg',
+        productPrice: '$59.0',
+        category: 'kids'
+    },
+    {
+        id: 7,
+        productImg: './Ashion-Images/product-8.jpg',
+        productHeader: 'Buttons tweed blazer',
+        starIcon: './Ashion-Images/star-solid.svg',
+        productPrice: '$49.0',
+        category: 'kids'
+    },
+]
