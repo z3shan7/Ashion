@@ -505,6 +505,13 @@ header {
   gap: 25px;
   list-style: none; }
 
+.product__links {
+  cursor: pointer;
+  padding-bottom: 3px; }
+
+.product__links.active {
+  border-bottom: 2px solid var(--bg-btn); }
+
 .product__gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -518,9 +525,6 @@ header {
   justify-content: center;
   text-align: center;
   overflow: hidden; }
-
-.product__rows:nth-child(1) img {
-  position: relative; }
 
 .product__img-section {
   position: relative;
@@ -544,23 +548,28 @@ header {
   padding: 0;
   margin: 0;
   position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  transform: translateY(100px);
+  transition: all 400ms ease-in-out; }
 
-.product__imgs:hover {
+.product__rows:hover .product__icons-list {
   cursor: pointer;
-  bottom: 40px; }
+  transform: translateY(0); }
 
 .product__icons {
   background-color: #fff;
   padding: 1rem;
-  border-radius: 50%;
-  transition: all 300ms ease-in; }
+  border-radius: 50%; }
 
 .product__icons:hover {
   background-color: var(--product-color-1);
   color: #fff; }
+
+.product__icons:hover i {
+  transform: rotate(360deg);
+  transition: all 400ms ease-in; }
 
 .banner {
   background-image: url(./Ashion-Images/banner-1.jpg);

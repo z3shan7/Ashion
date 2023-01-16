@@ -76,7 +76,7 @@ const product = [
         productHeader: 'Buttons tweed blazer',
         starIcon: './Ashion-Images/star-solid.svg',
         productPrice: '$59.0',
-        category: 'women'
+        category: 'Women'
     },
     {
         id: 1,
@@ -84,7 +84,7 @@ const product = [
         productHeader: 'Buttons tweed blazer',
         starIcon: './Ashion-Images/star-solid.svg',
         productPrice: '$49.0',
-        category: 'men'
+        category: 'Men'
     },
     {
         id: 2,
@@ -92,7 +92,7 @@ const product = [
         productHeader: 'Buttons tweed blazer',
         starIcon: './Ashion-Images/star-solid.svg',
         productPrice: '$59.0',
-        category: 'women'
+        category: 'Women'
     },
     {
         id: 3,
@@ -100,7 +100,7 @@ const product = [
         productHeader: 'Buttons tweed blazer',
         starIcon: './Ashion-Images/star-solid.svg',
         productPrice: '$59.0',
-        category: 'men'
+        category: 'Men'
     },
     {
         id: 4,
@@ -108,7 +108,7 @@ const product = [
         productHeader: 'Buttons tweed blazer',
         starIcon: './Ashion-Images/star-solid.svg',
         productPrice: '$59.0',
-        category: 'men'
+        category: 'Men'
     },
     {
         id: 5,
@@ -116,7 +116,7 @@ const product = [
         productHeader: 'Buttons tweed blazer',
         starIcon: './Ashion-Images/star-solid.svg',
         productPrice: '$49.0',
-        category: 'women'
+        category: 'Women'
     },
     {
         id: 6,
@@ -124,7 +124,7 @@ const product = [
         productHeader: 'Buttons tweed blazer',
         starIcon: './Ashion-Images/star-solid.svg',
         productPrice: '$59.0',
-        category: 'kids'
+        category: 'Women'
     },
     {
         id: 7,
@@ -132,6 +132,108 @@ const product = [
         productHeader: 'Buttons tweed blazer',
         starIcon: './Ashion-Images/star-solid.svg',
         productPrice: '$49.0',
+        category: 'Men'
+    },
+    {
+        id: 8,
+        productImg: './Ashion-Images/kids-1.jpg',
+        productHeader: 'New trend',
+        starIcon: './Ashion-Images/star-solid.svg',
+        productPrice: '$79.0',
         category: 'kids'
     },
+    
+    {
+        id: 10,
+        productImg: './Ashion-Images/cosmetics.jpg',
+        productHeader: 'New trend',
+        starIcon: './Ashion-Images/star-solid.svg',
+        productPrice: '$79.0',
+        category: 'Accessories'
+    },
+
 ]
+
+// prodcut gallery 
+
+const gallerySection = document.querySelector('.product__gallery');
+const productLinks = document.querySelectorAll('.product__links')
+
+console.log(productLinks)
+
+// active button
+
+productLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        productLinks.forEach((Element) => Element.classList.remove('active'))
+        link.classList.add('active')
+    })
+})
+
+// load content
+
+window.addEventListener('DOMContentLoaded', () => {
+    showProduct(product)
+
+})
+
+
+// filter items
+
+productLinks.forEach((link => {
+    link.addEventListener('click', (e) => {
+
+        const category = e.currentTarget.dataset.id;
+
+        const productCategory = product.filter((productItem) => {
+            if (productItem.category === category) {
+                return productItem
+            }
+        })
+        if (category === 'All Menu') {
+            showProduct(product)
+
+        } else {
+            showProduct(productCategory)
+        }
+
+    })
+}))
+
+function showProduct(product) {
+
+    let displayProduct = product.map((item) => {
+
+        return `<div class="product__rows">
+                    <div class="product__img-section">
+                        <img src="${item.productImg}" alt="" class="product__imgs">
+                        <ul class="product__icons-list">
+                            <li><a href="#" class="product__icons product__icons--1"><i
+                                        class="fa-solid fa-up-right-and-down-left-from-center "></i></a></li>
+                            <li><a href="#" class="product__icons product__icons--2"><i
+                                        class="fa-regular fa-heart"></i></a></li>
+                            <li><a href="#" class="product__icons product__icons--3"><i
+                                        class="fa-solid fa-bag-shopping"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__text">
+                        <p class="heading-5">${item.productHeader}</p>
+                        <div class="product__ratings">
+                            <img src="${item.starIcon}" alt="" srcset="" class="product__icon-star">
+                            <img src="${item.starIcon}" alt="" srcset="" class="product__icon-star">
+                            <img src="${item.starIcon}" alt="" srcset="" class="product__icon-star">
+                            <img src="${item.starIcon}" alt="" srcset="" class="product__icon-star">
+                            <img src="${item.starIcon}" alt="" srcset="" class="product__icon-star">
+
+                        </div>
+                        <p class="heading-4 text-bold-600">$${item.productPrice}</p>
+                    </div>
+                </div>`
+
+
+    })
+    displayProduct = displayProduct.join('')
+    gallerySection.innerHTML = displayProduct
+
+}
+console.log(showProduct)
