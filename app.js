@@ -142,7 +142,7 @@ const product = [
         productPrice: '$79.0',
         category: 'kids'
     },
-    
+
     {
         id: 10,
         productImg: './Ashion-Images/cosmetics.jpg',
@@ -226,7 +226,7 @@ function showProduct(product) {
                             <img src="${item.starIcon}" alt="" srcset="" class="product__icon-star">
 
                         </div>
-                        <p class="heading-4 text-bold-600">$${item.productPrice}</p>
+                        <p class="heading-4 text-bold-600">${item.productPrice}</p>
                     </div>
                 </div>`
 
