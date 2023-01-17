@@ -23,7 +23,7 @@ const sideNavList = document.querySelector('.sideNav__list')
 const OpenSubLinks = document.querySelector('.sideNav__drop-down-menu')
 const SubLinksDropDown = document.querySelector('.sideNav__drop-down-list')
 const openIcon = document.getElementById('open-icon')
-const closeIcon = document.getElementById('close-icon')
+const closeIcon = document.querySelector('.close-icon')
 const sideNav = document.querySelector('.sideNav')
 
 
@@ -43,8 +43,10 @@ openIcon.addEventListener('click', () => {
 
 
 })
+
 closeIcon.addEventListener('click', () => {
     sideNav.classList.remove('show-sideNav')
+    console.log('close icon')
 
 
 })
@@ -159,7 +161,7 @@ const product = [
 const gallerySection = document.querySelector('.product__gallery');
 const productLinks = document.querySelectorAll('.product__links')
 
-console.log(productLinks)
+
 
 // active button
 
@@ -217,7 +219,7 @@ function showProduct(product) {
                         </ul>
                     </div>
                     <div class="product__text">
-                        <p class="heading-5">${item.productHeader}</p>
+                        <p class="heading-5 product__header">${item.productHeader}</p>
                         <div class="product__ratings">
                             <img src="${item.starIcon}" alt="" srcset="" class="product__icon-star">
                             <img src="${item.starIcon}" alt="" srcset="" class="product__icon-star">
@@ -226,7 +228,7 @@ function showProduct(product) {
                             <img src="${item.starIcon}" alt="" srcset="" class="product__icon-star">
 
                         </div>
-                        <p class="heading-4 text-bold-600">${item.productPrice}</p>
+                        <h6 class="heading-4 text-bold-600">${item.productPrice}</h6>
                     </div>
                 </div>`
 
@@ -236,4 +238,3 @@ function showProduct(product) {
     gallerySection.innerHTML = displayProduct
 
 }
-console.log(showProduct)

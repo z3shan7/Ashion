@@ -132,7 +132,7 @@ body {
   .paragraph-1 {
     font-size: 12px; }
   .heading-5 {
-    font-size: 12px; }
+    font-size: 15px; }
   .show-now_link {
     font-size: 12px; } }
 
@@ -499,6 +499,18 @@ header {
   display: flex;
   justify-content: space-between; }
 
+.product__header h2 {
+  position: relative; }
+
+.product__header h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 80px;
+  background: #ca1515; }
+
 .product__list {
   padding: 0;
   margin: 0;
@@ -525,7 +537,66 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
+
+.product__rows:nth-child(1)::after {
+  content: 'New';
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: var(--clr-green);
+  font-size: 12px;
+  display: inline-block;
+  padding: 2px 8px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase; }
+
+.product__rows:nth-child(3)::after {
+  content: 'out of stock';
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: #000;
+  font-size: 12px;
+  display: inline-block;
+  padding: 2px 8px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase; }
+
+.product__rows:nth-child(6)::after {
+  content: 'Sale';
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: var(--bg-btn);
+  font-size: 12px;
+  display: inline-block;
+  padding: 2px 8px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase; }
+
+.product__rows:nth-child(6) h6 {
+  color: var(--bg-btn); }
+
+.product__rows:nth-child(8)::after {
+  content: 'Sale';
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: var(--bg-btn);
+  font-size: 12px;
+  display: inline-block;
+  padding: 2px 8px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase; }
+
+.product__rows:nth-child(8) h6 {
+  color: var(--bg-btn); }
 
 .product__img-section {
   position: relative;
@@ -578,7 +649,14 @@ header {
 
 @media screen and (max-width: 820px) {
   .product__gallery {
-    grid-template-columns: 1fr 1fr; } }
+    grid-template-columns: 1fr 1fr; }
+  .product__header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; }
+  .product__links {
+    font-size: 15px !important; } }
 
 @media screen and (max-width: 590px) {
   .product__gallery {
