@@ -1,0 +1,41 @@
+.trend {
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        // gap: 20px;
+    }
+
+
+    &__rows {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 1.5rem;
+        // flex-basis: 33.3333%;
+    }
+
+    &__header {
+        position: relative;
+    }
+
+    &__header::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 80px;
+        background: #ca1515;
+        // display: none;
+    }
+
+
+    &__items {
+        display: flex;
+        gap: 20px;
+        // flex-direction: column;
+
+    }
+}

@@ -30,13 +30,17 @@ body {
 }
 
 .padding-b-md {
-    padding-bottom: 1.8rem;
+    padding-bottom: 2rem;
 }
 
 .pb-sm {
     padding-bottom: 1.2rem;
 
+}
 
+
+.pd-top-bg {
+    padding-top: 1rem;
 }
 
 .pb-xsm {
@@ -93,7 +97,7 @@ body {
 .heading-5-dark {
     font-size: 14px;
     color: var(--clr-black);
-    padding-bottom: 1.5rem;
+
 }
 
 .heading-6-dark {
@@ -180,10 +184,10 @@ body {
 
     .heading-2 {
         font-size: 20px;
-        font-weight: 300;
-        padding-bottom: 1rem;
-        color: var(--section-heading);
-        font-family: inherit;
+        // font-weight: 300;
+        // padding-bottom: 1rem;
+        // color: var(--section-heading);
+        // font-family: inherit;
     }
 
     .paragraph-1 {

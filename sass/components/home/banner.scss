@@ -5,4 +5,95 @@
     background-position: top center;
     height: 500px;
     width: 100%;
+
+
+
+
+    &__header {
+        font-size: 18px;
+        color: var(--bg-btn);
+        text-transform: uppercase;
+    }
+
+    &__heading {
+        font-size: 80px;
+        color: var(--clr-black);
+        font-family: var(--ff-Cookie);
+        font-weight: 400;
+        padding-bottom: 1rem;
+    }
+}
+
+.swiper {
+    width: 50vw;
+    height: 50vh;
+}
+
+.swiper-slide {
+    text-align: center;
+
+
+    flex-direction: column;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    height: 70%;
+
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 75px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: var(--bg-btn);
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width:850px) {
+    .banner {
+
+        &__heading {
+            font-size: 60px;
+
+        }
+
+    }
+
+
+
+}
+
+@media screen and (max-width:650px) {
+    .banner {
+
+        &__header {
+            font-size: 15px;
+        }
+
+        &__heading {
+            font-size: 35px;
+
+        }
+
+    }
+
+
+
 }

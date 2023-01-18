@@ -20,10 +20,13 @@ body {
   padding: 3rem 0; }
 
 .padding-b-md {
-  padding-bottom: 1.8rem; }
+  padding-bottom: 2rem; }
 
 .pb-sm {
   padding-bottom: 1.2rem; }
+
+.pd-top-bg {
+  padding-top: 1rem; }
 
 .pb-xsm {
   padding-bottom: .8rem; }
@@ -64,8 +67,7 @@ body {
 
 .heading-5-dark {
   font-size: 14px;
-  color: var(--clr-black);
-  padding-bottom: 1.5rem; }
+  color: var(--clr-black); }
 
 .heading-6-dark {
   font-size: 12px;
@@ -124,11 +126,7 @@ body {
   .heading-1 {
     font-size: 30px; }
   .heading-2 {
-    font-size: 20px;
-    font-weight: 300;
-    padding-bottom: 1rem;
-    color: var(--section-heading);
-    font-family: inherit; }
+    font-size: 20px; }
   .paragraph-1 {
     font-size: 12px; }
   .heading-5 {
@@ -609,7 +607,7 @@ header {
   font-size: 10px;
   color: var(--yellow-clg);
   margin-right: -4px;
-  width: 12px; }
+  width: 10px; }
 
 .product__icons-list {
   list-style: none;
@@ -671,3 +669,82 @@ header {
   background-position: top center;
   height: 500px;
   width: 100%; }
+  .banner__header {
+    font-size: 18px;
+    color: var(--bg-btn);
+    text-transform: uppercase; }
+  .banner__heading {
+    font-size: 80px;
+    color: var(--clr-black);
+    font-family: var(--ff-Cookie);
+    font-weight: 400;
+    padding-bottom: 1rem; }
+
+.swiper {
+  width: 50vw;
+  height: 50vh; }
+
+.swiper-slide {
+  text-align: center;
+  flex-direction: column;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 70%; }
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 75px; }
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: var(--bg-btn);
+  margin-right: 10px; }
+
+@media screen and (max-width: 850px) {
+  .banner__heading {
+    font-size: 60px; } }
+
+@media screen and (max-width: 650px) {
+  .banner__header {
+    font-size: 15px; }
+  .banner__heading {
+    font-size: 35px; } }
+
+.trend__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.trend__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 1.5rem; }
+
+.trend__header {
+  position: relative; }
+
+.trend__header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 80px;
+  background: #ca1515; }
+
+.trend__items {
+  display: flex;
+  gap: 20px; }

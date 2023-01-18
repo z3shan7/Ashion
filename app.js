@@ -174,10 +174,10 @@ productLinks.forEach((link) => {
 
 // load content
 
-window.addEventListener('DOMContentLoaded', () => {
-    showProduct(product)
+// window.addEventListener('DOMContentLoaded', () => {
+//     showProduct(product)
 
-})
+// })
 
 
 // filter items
