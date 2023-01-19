@@ -1,0 +1,21 @@
+.services {
+
+    &__content {
+        display: flex;
+        // justify-content: space-between;
+        gap: 50px;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__items {
+        display: flex;
+        gap: 20px;
+        // align-items: center;
+    }
+
+    &__icon {
+        font-size: 36px;
+        color: var(--bg-btn);
+    }
+}

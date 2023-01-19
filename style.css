@@ -17,7 +17,7 @@ body {
   padding: 4rem 0; }
 
 .pd-sm {
-  padding: 3rem 0; }
+  padding: 2rem 0; }
 
 .padding-b-md {
   padding-bottom: 2rem; }
@@ -748,3 +748,94 @@ header {
 .trend__items {
   display: flex;
   gap: 20px; }
+
+.discount {
+  max-width: 1100px;
+  margin: 0 auto; }
+  .discount__content {
+    display: flex; }
+  .discount__imgs {
+    flex-basis: 50%; }
+  .discount__picture {
+    object-fit: cover;
+    vertical-align: middle;
+    height: 100%; }
+  .discount__text {
+    background-color: var(--clr-primary-7);
+    flex-basis: 50%;
+    text-align: center;
+    padding: 75px 90px 50px;
+    position: relative;
+    z-index: 1; }
+  .discount__text::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 33%;
+    transform: translate(-50%, -50%);
+    height: 183px;
+    width: 183px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1; }
+  .discount__title {
+    font-size: 12px;
+    color: var(--clr-black);
+    text-transform: uppercase;
+    font-weight: 500; }
+  .discount__header {
+    font-size: 60px;
+    color: var(--bg-btn);
+    font-family: var(--ff-Cookie);
+    line-height: 46px;
+    padding-bottom: 10px;
+    font-weight: 400; }
+  .discount__percent {
+    font-size: 14px;
+    color: var(--clr-black);
+    font-weight: 500;
+    text-transform: uppercase; }
+  .discount__percent span {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--bg-btn); }
+  .discount__timeLeft {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between; }
+  .discount__countdown {
+    font-size: 30px;
+    color: var(--bg-color); }
+  .discount__countdown span {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: -5px; }
+
+@media screen and (max-width: 850px) {
+  .discount {
+    padding-left: 20px;
+    padding-right: 20px; }
+    .discount__content {
+      flex-direction: column; }
+    .discount__picture {
+      width: 100%; } }
+
+@media screen and (max-width: 576px) {
+  .discount {
+    padding: 0; }
+    .discount__text {
+      padding: 65px 40px 30px; } }
+
+.services__content {
+  display: flex;
+  gap: 50px;
+  align-content: center;
+  flex-wrap: wrap; }
+
+.services__items {
+  display: flex;
+  gap: 20px; }
+
+.services__icon {
+  font-size: 36px;
+  color: var(--bg-btn); }
