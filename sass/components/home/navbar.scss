@@ -63,6 +63,7 @@ header {
         transform: translateY(30px);
         transition: all 400ms ease;
         opacity: 0;
+        z-index: 10000;
     }
 
     &__drop-down-list.show-list {

@@ -1,0 +1,99 @@
+.insta-gallery {
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    &__imgs {
+        position: relative;
+    }
+
+    &__picture {
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+        transition: all 400ms ease-out;
+
+    }
+
+    &__imgs:hover &__picture {
+        opacity: 0.1;
+        cursor: pointer;
+    }
+
+
+    // &__picture::after {
+    //     content: 'hello';
+    //     background-color: #fff;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     top: 10px;
+    //     left: 0;
+    //     z-index: 100;
+    // }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+    }
+
+    &__imgs:hover &__caption {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    &__icon {
+        color: var(--icon-clr);
+        font-size: 30px;
+    }
+
+    &__text {
+        color: var(--icon-clr);
+    }
+
+}
+
+@media screen and (max-width:1090px) {
+
+    .insta-gallery {
+
+        &__content {
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .insta-gallery {
+
+        &__content {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .insta-gallery {
+
+        &__content {
+            grid-template-columns: 1fr;
+
+        }
+    }
+
+}
