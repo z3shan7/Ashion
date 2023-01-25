@@ -32,6 +32,7 @@
     &__paragraph {
         width: 60%;
 
+
     }
 
     &__header {
@@ -119,6 +120,13 @@
         &__imgs--5 {
             grid-column: 1 / span 2;
             //     grid-row: 4/5;
+
+        }
+
+        &__paragraph {
+            // width: 60%;
+            font-size: 12px;
+            line-height: inherit;
 
         }
 

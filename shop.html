@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <title>Ashion</title>
 </head>
@@ -20,26 +21,26 @@
 
 <body>
     <!-- Navigation section -->
-    <header>
+    <header class="header">
         <nav class="navbar">
             <div class="navbar__logo-box">
                 <img src="./Ashion-Images/logo.png" alt="company logo" srcset="">
             </div>
 
             <div class="navbar__list">
-                <li><a href="index.html" class="navbar__links navbar__active-link active">Home</a></li>
+                <li><a href="index.html" class="navbar__links navbar__active-link">Home</a></li>
                 <li><a href="#" class="navbar__links">Women's</a></li>
                 <li><a href="#" class="navbar__links">men's</a></li>
                 <li><a href="shop.html" class="navbar__links">shop</a></li>
                 <div class="navbar__drop-down" data_dropdown>
 
-                    <li><a href="#" class="navbar__links navbar__navLinks drop-down-menu ">Page</a></li>
-                    <!-- <div class="navbar__drop-down-list">
-                        <a href="#" class="navbar__links">Product Details</a>
-                        <a href="#" class="navbar__links">Shop Cart</a>
-                        <a href="#" class="navbar__links">Checkout</a>
-                        <a href="#" class="navbar__links">Blog detials</a>
-                    </div> -->
+                    <li><a href="#" class="navbar__links  navbar__drop-down-menu " id="dropDown">Page</a></li>
+                    <div class="navbar__drop-down-list">
+                        <a href="#" class="navbar__sub-links">Product Details</a>
+                        <a href="#" class="navbar__sub-links">Shop Cart</a>
+                        <a href="#" class="navbar__sub-links">Checkout</a>
+                        <a href="#" class="navbar__sub-links">Blog detials</a>
+                    </div>
                 </div>
                 <li><a href="blogs.html" class="navbar__links">Blogs</a></li>
                 <li><a href="contact.html" class="navbar__links">Contact</a></li>
@@ -51,15 +52,191 @@
                     /
                     <a href="#" class="navbar__sign-up-links">Register</a>
                 </div>
-                <a href="#" class="heading-3"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="#" class="heading-3"><i class="fa-regular fa-heart"></i></a>
-                <a href="#" class="heading-3"><i class="fa-solid fa-cart-shopping"></i></a>
+                <div class="navbar__searchBar-overlay">
+                    <span><i class="fa-solid fa-circle-xmark navbar__searchBar-close" id="close-icon"></i></span>
+
+                    <input type="text" name="text" id="text" placeholder="Search here...."
+                        class="navbar__searchBar-input">
+                </div>
+                <a href="#" class="heading-3"><i class="fa-solid fa-magnifying-glass" id="search-icon"></i></a>
+                <a href="#" class="heading-3 navbar__notify"><i class="fa-regular fa-heart"></i></a>
+                <a href="#" class="heading-3 navbar__notify"><i class="fa-solid fa-cart-shopping"></i></a>
 
             </div>
+
+            <div class="navbar__ham-menu" id="open-icon">
+                <span><i class="fa-solid fa-bars"></i></span>
+            </div>
         </nav>
+
     </header>
+    <aside>
+        <section class="sideNav">
+            <div class="sideNav__closeNav pb-sm">
+                <span><i class="fa-solid fa-circle-xmark close-icon"></i></span>
+            </div>
+            <div class="sideNav__icons pb-sm">
+                <a href="#" class="heading-3"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#" class="heading-3 navbar__notify"><i class="fa-regular fa-heart"></i></a>
+                <a href="#" class="heading-3 navbar__notify"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="sideNav__logo-box pb-sm">
+                <img src="./Ashion-Images/logo.png" alt="company logo" srcset="">
+            </div>
+
+            <div class="sideNav__menu">
+                <div>
+                    <a href="#" class="sideNav__btn">MENU <span><i class="fa-solid fa-bars"></i></span>
+                    </a>
+                </div>
+                <div class="sideNav__list">
+                    <li><a href="index.html" class="sideNav__links sideNav__active-link">Home</a></li>
+                    <li><a href="#" class="sideNav__links">Women's</a></li>
+                    <li><a href="#" class="sideNav__links">Men's</a></li>
+                    <li><a href="shop.html" class="sideNav__links">Shop</a></li>
+                    <div class="sideNav__drop-down" data_dropdown>
+
+                        <li><a href="#" class="sideNav__links  sideNav__drop-down-menu">Page
+                                <span class="sideNav__arrow-right">▼</span></a></li>
+                        <div class="sideNav__drop-down-list">
+                            <a href="#" class="sideNav__sub-links">Product Details</a>
+                            <a href="#" class="sideNav__sub-links">Shop Cart</a>
+                            <a href="#" class="sideNav__sub-links">Checkout</a>
+                            <a href="#" class="sideNav__sub-links">Blog detiasideNav
+                        </div>
+                    </div>
+                    <li><a href="blogs.html" class="sideNav__links">Blogs</a></li>
+                    <li><a href="contact.html" class="sideNav__links">Contact</a></li>
+                </div>
+
+            </div>
+            <div class="sideNav__sign-up">
+                <a href="#" class="sideNav__sign-up-links">Login</a>
+                /
+                <a href="#" class="sideNav__sign-up-links">Register</a>
+            </div>
+
+        </section>
+    </aside>
     <!-- Navigation section Ends  -->
-    <script src="app.js"></script>
+
+
+    <section class="insta-gallery">
+        <div class="insta-gallery__content pd-md">
+
+            <figure class="insta-gallery__imgs">
+                <img src="./Ashion-Images/insta-1.jpg" alt="" class="insta-gallery__picture">
+                <figcaption class="insta-gallery__caption">
+                    <span class="insta-gallery__icon"><i class="fa-brands fa-instagram"></i></span>
+                    <p class="insta-gallery__text">@ ashion_shop</p>
+                </figcaption>
+            </figure>
+            <figure class="insta-gallery__imgs">
+                <img src="./Ashion-Images/insta-2.jpg" alt="" class="insta-gallery__picture">
+                <figcaption class="insta-gallery__caption">
+                    <span class="insta-gallery__icon"><i class="fa-brands fa-instagram"></i></span>
+                    <p class="insta-gallery__text">@ ashion_shop</p>
+                </figcaption>
+            </figure>
+            <figure class="insta-gallery__imgs">
+                <img src="./Ashion-Images/insta-3.jpg" alt="" class="insta-gallery__picture">
+                <figcaption class="insta-gallery__caption">
+                    <span class="insta-gallery__icon"><i class="fa-brands fa-instagram"></i></span>
+                    <p class="insta-gallery__text">@ ashion_shop</p>
+                </figcaption>
+            </figure>
+            <figure class="insta-gallery__imgs">
+                <img src="./Ashion-Images/insta-4.jpg" alt="" class="insta-gallery__picture">
+                <figcaption class="insta-gallery__caption">
+                    <span class="insta-gallery__icon"><i class="fa-brands fa-instagram"></i></span>
+                    <p class="insta-gallery__text">@ ashion_shop</p>
+                </figcaption>
+            </figure>
+            <figure class="insta-gallery__imgs">
+                <img src="./Ashion-Images/insta-5.jpg" alt="" class="insta-gallery__picture">
+                <figcaption class="insta-gallery__caption">
+                    <span class="insta-gallery__icon"><i class="fa-brands fa-instagram"></i></span>
+                    <p class="insta-gallery__text">@ ashion_shop</p>
+                </figcaption>
+            </figure>
+            <figure class="insta-gallery__imgs">
+                <img src="./Ashion-Images/insta-6.jpg" alt="" class="insta-gallery__picture">
+                <figcaption class="insta-gallery__caption">
+                    <span class="insta-gallery__icon"><i class="fa-brands fa-instagram"></i></span>
+                    <p class="insta-gallery__text">@ ashion_shop</p>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer__content section-center pb-xsm">
+
+            <div class="footer__rows footer__rows--1">
+                <img src="./Ashion-Images/logo.png" alt="" class="footer__img">
+                <p class="footer__text heading-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor
+                    incididunt cilisis.</p>
+                <div class="footer__our-client">
+                    <img src="./Ashion-Images/payment-1.png" alt="">
+                    <img src="./Ashion-Images/payment-2.png" alt="">
+                    <img src="./Ashion-Images/payment-3.png" alt="">
+                    <img src="./Ashion-Images/payment-4.png" alt="">
+                    <img src="./Ashion-Images/payment-5.png" alt="">
+                </div>
+            </div>
+
+            <div class="footer__rows footer__rows--2">
+                <h6 class="footer__title heading-4 text-uppercase">Quick links</h6>
+                <ul class="footer__list">
+                    <li class="footer__links heading-5">About</li>
+                    <li class="footer__links heading-5">Blogs</li>
+                    <li class="footer__links heading-5">Contact</li>
+                    <li class="footer__links heading-5">FAQ</li>
+                </ul>
+            </div>
+            <div class="footer__rows footer__rows--3">
+                <h6 class="footer__title heading-4 text-uppercase">Account</h6>
+                <ul class="footer__list">
+                    <li class="footer__links heading-5">My Account</li>
+                    <li class="footer__links heading-5">Orders Tracking</li>
+                    <li class="footer__links heading-5">Checkout</li>
+                    <li class="footer__links heading-5">Wishlist</li>
+                </ul>
+            </div>
+            <div class="footer__rows footer__rows--4">
+                <h6 class="footer__title heading-4 text-uppercase">NEWSLETTER</h6>
+                <form action="#" class="footer__form">
+                    <input type="text" class="footer__input" placeholder="Email">
+                    <button type="submit" class="footer__btn">Subscribe</button>
+                </form>
+                <div class="footer__icons">
+                    <a href="#" class="footer__icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="footer__icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="footer__icon"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="footer__icon"><i class="fa-brands fa-pinterest"></i></a>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script type="module" src="app.js"></script>
+    <script>
+        let swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+
+
 </body>
 
 </html>

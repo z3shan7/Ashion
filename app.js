@@ -62,7 +62,6 @@ console.log(searchIcon)
 
 searchIcon.addEventListener('click', () => {
 
-    // console.log(e.currentTarget)
     console.log('first')
 
 })
@@ -174,10 +173,10 @@ productLinks.forEach((link) => {
 
 // load content
 
-// window.addEventListener('DOMContentLoaded', () => {
-//     showProduct(product)
+window.addEventListener('DOMContentLoaded', () => {
+    showProduct(product)
 
-// })
+})
 
 
 // filter items
@@ -238,3 +237,106 @@ function showProduct(product) {
     gallerySection.innerHTML = displayProduct
 
 }
+
+// countdown section
+
+const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+];
+const weekdays = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+];
+
+const items = document.querySelectorAll('.discount__countdown')
+const deadLine = document.querySelector('.discount__deadline')
+const timeLeft = document.querySelector('.discount__timeLeft')
+console.log(items)
+
+let tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth();
+let tempDay = tempDate.getDate();
+
+const futureDate = new Date(tempYear, tempMonth, tempDay + 30, 11, 30, 0);
+// let futureDate = new Date(2023, 1, 28, 11, 30, 0)
+console.log(futureDate)
+
+const year = futureDate.getFullYear()
+const hour = futureDate.getHours()
+const mintues = futureDate.getMinutes()
+
+let month = futureDate.getMonth()
+month = months[month]
+const date = futureDate.getDate()
+
+const weekday = weekdays[futureDate.getDay()]
+
+deadLine.textContent = `Discount ends on ${weekday} ${date}, ${month} ${year}, ${hour}:${mintues}am`
+
+const futureTime = futureDate.getTime();
+
+function getRemainingTime() {
+    const today = new Date().getTime()
+    const t = futureTime - today
+
+
+    // 1s = 1000ms
+    // 1m = 60s
+    // 1hr = 60min
+    // 1d = 24hr
+
+    // values in ms
+
+    const oneDay = 24 * 60 * 60 * 1000;
+    const oneHour = 60 * 60 * 1000;
+    const oneMinute = 60 * 1000;
+    // calculate value
+
+    let days = t / oneDay
+    days = Math.floor(days)
+    let hours = Math.floor((t % oneDay) / oneHour);
+    let minutes = Math.floor((t % oneHour) / oneMinute);
+    let seconds = Math.floor((t % oneMinute) / 1000)
+
+    //  set value arrays
+
+    const values = [days, hours, minutes, seconds];
+    function format(item) {
+        if (item < 10) {
+            return (item = `0${item}`);
+        }
+        return item;
+    }
+    items.forEach((item, index) => {
+        item.innerHTML = format(values[index])
+    })
+
+    if (t < 0) {
+        clearInterval(countdown);
+        timeLeft.innerHTML = `<h4 class="discount__expired">Sorry, Discount has expired!</h4>`;
+    }
+}
+
+
+let countdown = setInterval(getRemainingTime, 1000);
+getRemainingTime()
+
+
+

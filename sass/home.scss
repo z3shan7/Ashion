@@ -38,6 +38,9 @@ body {
 
 }
 
+.pd-top {
+    padding-top: 3rem;
+}
 
 .pd-top-bg {
     padding-top: 1rem;
@@ -52,7 +55,7 @@ body {
 }
 
 .text-center {
-    text-align: center;
+    text-align: center !important;
 }
 
 .text-white {
