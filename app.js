@@ -340,3 +340,19 @@ getRemainingTime()
 
 
 
+// accordion
+
+
+const shopAccordion = document.querySelectorAll('.shop__accordion')
+const title = document.querySelectorAll('.shop__accordion--title')
+const dropDownText = document.querySelectorAll('.shop__accordion--text')
+
+// console.log(title)
+shopAccordion.forEach(accordion => {
+    accordion.addEventListener('click', () => {
+        console.log('first')
+        dropDownText.forEach(text => {
+            text.classList.toggle('active')
+        })
+    })
+})
