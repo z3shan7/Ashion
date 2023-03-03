@@ -46,7 +46,7 @@
                 <li><a href="contact.html" class="navbar__links">Contact</a></li>
             </div>
 
-            <div class="navbar__icons">
+            <!-- <div class="navbar__icons">
                 <div class="navbar__sign-up">
                     <a href="#" class="navbar__sign-up-links">Login</a>
                     /
@@ -59,6 +59,24 @@
                         class="navbar__searchBar-input">
                 </div>
                 <a href="#" class="heading-3"><i class="fa-solid fa-magnifying-glass" id="search-icon"></i></a>
+                <a href="#" class="heading-3 navbar__notify"><i class="fa-regular fa-heart"></i></a>
+                <a href="#" class="heading-3 navbar__notify"><i class="fa-solid fa-cart-shopping"></i></a>
+
+            </div> -->
+
+            <div class="navbar__icons">
+                <div class="navbar__sign-up">
+                    <a href="#" class="navbar__sign-up-links">Login</a>
+                    /
+                    <a href="#" class="navbar__sign-up-links">Register</a>
+                </div>
+                <div class="navbar__searchBar-overlay">
+                    <span><i class="fa-solid fa-circle-xmark navbar__searchBar-close" id="close-icon"></i></span>
+
+                    <input type="text" name="text" id="text" placeholder="Search here...."
+                        class="navbar__searchBar-input">
+                </div>
+                <a href="#" class="heading-3 search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
                 <a href="#" class="heading-3 navbar__notify"><i class="fa-regular fa-heart"></i></a>
                 <a href="#" class="heading-3 navbar__notify"><i class="fa-solid fa-cart-shopping"></i></a>
 
@@ -129,9 +147,7 @@
 
     <section class="shop section-center-12x">
         <div class="shop__content">
-
             <!-- categories section -->
-
             <div class="shop__categories">
 
                 <div class="shop__row shop__row--1">
@@ -144,7 +160,7 @@
                             <div class="shop__accordion--title ">
                                 <p class=" heading-5-dark font-w ">Women</p>
                                 <button type="button" class="shop__accordion--btn ">
-                                    <span class="shop__accordion--icon ">
+                                    <span >
                                         <i class="fa-solid fa-chevron-down shop__accordion--icon"></i>
                                     </span>
                                 </button>
@@ -315,7 +331,7 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script type="module" src="app.js"></script>
+    <script type="module" src="shoppage.js"></script>
     <script>
         let swiper = new Swiper(".mySwiper", {
             spaceBetween: 30,

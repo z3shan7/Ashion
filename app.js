@@ -3,18 +3,16 @@
 const dropDownList = document.querySelector('.navbar__drop-down-list')
 const dropDownBtn = document.querySelector('.navbar__drop-down-menu')
 const header = document.querySelector('.header');
-// const her
-console.log(header)
 
-// dropDownBtn.addEventListener('mouseover', () => {
-//     dropDownList.classList.add('show-list')
-//     // console.log('first')
 
-// })
+
+
 dropDownBtn.addEventListener('click', () => {
     dropDownList.classList.toggle('show-list')
 
 })
+
+
 
 // sidenav 
 
@@ -53,20 +51,22 @@ closeIcon.addEventListener('click', () => {
 // open close search bar
 
 const closeBar = document.querySelector('.navbar__searchBar-close')
-// const searchIcon = document.getElementById('search-icon')
-const searchIcon = document.querySelector('.navbar__sign-up-links')
+const searchIcon = document.querySelector('.search-icon')
+// const searchIcon = document.querySelector('.navbar__sign-up-links')
 const searchOverlay = document.querySelector('.navbar__searchBar-overlay')
 
 
-console.log(searchIcon)
+
 
 searchIcon.addEventListener('click', () => {
+    searchOverlay.classList.add('show-overlay')
 
     console.log('first')
 
 })
 
 closeBar.addEventListener('click', () => {
+    searchOverlay.classList.remove('show-overlay')
     console.log('close')
 })
 
@@ -344,15 +344,27 @@ getRemainingTime()
 
 
 const shopAccordion = document.querySelectorAll('.shop__accordion')
-const title = document.querySelectorAll('.shop__accordion--title')
 const dropDownText = document.querySelectorAll('.shop__accordion--text')
 
+// console.log(shopAccordion)
+
+// shopAccordion.forEach((accordion) => {
+
+//     const btn = accordion.querySelectorAll('.shop__accordion--title')
+//     console.log(btn)
+//     btn.addEventListener('click', () => {
+//         console.log('working btn')
+
+//         shopAccordion.forEach((item) => {
+//             if (item !== accordion) {
+//                 item.classList.remove('active')
+//             }
+//         })
+//         accordion.classList.toggle('active')
+
+//     })
+
+
+// })
+//
 // console.log(title)
-shopAccordion.forEach(accordion => {
-    accordion.addEventListener('click', () => {
-        console.log('first')
-        dropDownText.forEach(text => {
-            text.classList.toggle('active')
-        })
-    })
-})

@@ -335,10 +335,12 @@ header {
     transform: translate(-50%, -50%);
     z-index: 10000;
     width: 100%;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     transition: all 300ms ease-in; }
   .navbar__searchBar-overlay.show-overlay {
-    opacity: 1; }
+    opacity: 1;
+    visibility: visible; }
   .navbar__searchBar-input {
     border: none;
     outline: none;
@@ -1051,9 +1053,11 @@ header {
   content: ""; }
 
 .shop__accordion--text {
+  display: none;
   height: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all 500ms ease-in; }
 
 .shop__accordion--text.active {
-  transition: all 500ms ease-in;
+  display: block;
   height: auto; }

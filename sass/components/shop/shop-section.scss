@@ -86,15 +86,15 @@
     }
 
     &__accordion--text {
-        // display: none;
+        display: none;
         height: 0;
         overflow: hidden;
+        transition: all 500ms ease-in;
 
     }
 
     &__accordion--text.active {
-        transition: all 500ms ease-in;
-        // display: block;
+        display: block;
         height: auto;
     }
 
