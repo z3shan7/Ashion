@@ -15,6 +15,7 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <title>Ashion</title>
 </head>
@@ -198,9 +199,9 @@
     <!-- product Ends -->
 
     <!-- banner -->
-    <section class="banner pd-md ">
+    <section class="banner pd-md">
         <!-- <div class="banner__content"> -->
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper" data-aos="fade-up">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
 
@@ -243,7 +244,7 @@
     <!-- banner ends -->
 
     <!-- trend section -->
-    <section class="trend pd-md">
+    <section class="trend pd-md" data-aos="fade-up">
         <div class="trend__content section-center">
             <!-- Single row -->
             <div class="trend__rows trend__rows--1">
@@ -440,7 +441,7 @@
     </section>
     <!-- trend section Ends -->
 
-    <section class="discount">
+    <section class="discount" data-aos="fade-up">
         <div class="discount__content  pd-md">
             <div class="discount__imgs">
                 <img src="./Ashion-Images/discount.jpg" alt="" srcset="" class="discount__picture">
@@ -482,7 +483,7 @@
 
         </div>
     </section>
-    <section class="services">
+    <section class="services" data-aos="fade-up">
         <div class="services__content section-center pd-sm ">
             <!-- single item -->
             <div class="services__items">
@@ -531,7 +532,7 @@
 
         </div>
     </section>
-    <section class="insta-gallery">
+    <section class="insta-gallery" data-aos="fade-up">
         <div class="insta-gallery__content pd-md">
 
             <figure class="insta-gallery__imgs">
@@ -642,6 +643,13 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1000,
         });
     </script>
 

@@ -170,7 +170,8 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0; }
+  margin: 0;
+  font-weight: normal; }
 
 /* Make images easier to work with */
 img,
@@ -404,21 +405,26 @@ header {
     .sideNav__btn {
       border-radius: 4px;
       background-color: #222;
-      padding: 0.438em 0.625em; }
+      padding: 0.438em 0.625em;
+      margin-bottom: 1rem; }
     .sideNav__list {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 5px;
-      padding-top: 2rem;
-      display: none;
-      transition: all 400ms ease-in; }
+      overflow: hidden;
+      height: 0;
+      visibility: hidden;
+      transition: all 500ms ease-in; }
     .sideNav__list.show-list {
-      display: flex; }
+      height: 100%;
+      visibility: visible; }
     .sideNav__links {
       padding: .1rem .2rem;
       display: block;
       border-radius: 5px; }
+    .sideNav__active-link {
+      margin-top: 1rem; }
     .sideNav__links:hover {
       background-color: var(--clr-primary-6);
       cursor: pointer;

@@ -234,6 +234,7 @@ header {
             background-color: #222;
             // text-shadow: 0 1px 1px rgba(255 255 255 .9);
             padding: 0.438em 0.625em;
+            margin-bottom: 1rem;
             // margin: 5px 5px 6px;
         }
 
@@ -242,20 +243,19 @@ header {
             display: flex;
             flex-direction: column;
             gap: 5px;
-            padding-top: 2rem;
-            display: none;
-            // height: 0;
-            // opacity: 0;
-            transition: all 400ms ease-in;
+            overflow: hidden;
+            height: 0;
+            visibility: hidden;
+            transition: all 500ms ease-in;
 
 
 
         }
 
         &__list.show-list {
-            display: flex;
-            // height: 17rem;
-            // opacity: 1;
+            height: 100%;
+            visibility: visible;
+
 
         }
 
@@ -264,6 +264,12 @@ header {
             display: block;
             border-radius: 5px;
         }
+
+        &__active-link {
+            margin-top: 1rem;
+        }
+
+
 
         &__links:hover {
             background-color: var(--clr-primary-6);
