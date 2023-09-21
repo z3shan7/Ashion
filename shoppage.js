@@ -27,10 +27,7 @@ const sideNav = document.querySelector('.sideNav')
 
 // console.log(sideNav)
 
-sideNavBtn.addEventListener('click', () => {
-    sideNavList.classList.toggle('show-list')
 
-})
 OpenSubLinks.addEventListener('click', () => {
     SubLinksDropDown.classList.toggle('show-sub-links')
 
@@ -70,97 +67,47 @@ closeBar.addEventListener('click', () => {
 
 })
 
-// accordion
+// Price ranger slider
 
 
-// const shopAccordion = document.querySelectorAll('.shop__accordion')
+const rangeInput = document.querySelectorAll(".range-input input"),
+priceInput = document.querySelectorAll(".price-input input"),
+range = document.querySelector(".slider .progress");
+let priceGap = 1000;
 
-// document.addEventListener('DOMContentLoaded', () => {
-const dropDown = document.querySelectorAll('.shop__accordion--title')
-const dropDownText = document.querySelectorAll('.shop__accordion--text')
+priceInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minPrice = parseInt(priceInput[0].value),
+        maxPrice = parseInt(priceInput[1].value);
+        
+        if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
+            if(e.target.className === "input-min"){
+                rangeInput[0].value = minPrice;
+                range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+            }else{
+                rangeInput[1].value = maxPrice;
+                range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+            }
+        }
+    });
+});
 
-dropDown.forEach((drops) => drops.addEventListener('click', (e) => {
+rangeInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
 
-    console.log('first')
-    console.log(dropDownText)
-
-    const question = e.currentTarget.parentNode
-    console.log(question)
-
-    // dropDownText.forEach((dropText) => {
-
-
-    //     if (dropText.classList.contains('active')) {
-    //         dropText.classList.toggle('active')
-    //     }
-
-    //     else {
-    //         dropDownText.forEach(dropText => dropText.classList.remove('active'))
-    //         dropText.classList.add('active')
-    //     }
-    // })
-
-}))
-
-
-
-// })
-
-
-// const chevron = document.querySelectorAll('.shop__accordion--icon')
-// const btns = document.querySelectorAll('.shop__accordion--title')
-
-// console.log(shopAccordion)
-
-// shopAccordion.forEach((accordion) => {
-//     const btn = accordion.querySelector('.shop__accordion--title')
-
-//     btn.addEventListener('click', () => {
-//         // accordion.classList.toggle('active')
-//         dropDownText.forEach((text) => {
-//             text.classList.toggle('shop__accordion--active')
-//         })
-//     })
-
-
-
-
-
-
-
-
-    // btn.forEach((button) => {
-
-    //     button.addEventListener('click', () => {
-    //         console.log('first')
-    //         dropDownText.forEach(item => {
-    //             item.classList.toggle('active')
-    //             chevron.forEach(chev => {
-    //                 chev.classList.toggle('rotate-icon')
-
-    //             })
-
-
-
-
-
-
-
-
-    //         })
-    //     })
-    // btn.addEventListener('click', () => {
-    //     console.log('working btn')
-
-    //     dropDownText.forEach((item) => {
-    //         if (item !== accordion) {
-    //             item.classList.remove('active')
-    //         }
-    //     })
-    //     accordion.classList.toggle('active')
-
-// })
-
-//
-// })
-
+        if((maxVal - minVal) < priceGap){
+            if(e.target.className === "range-min"){
+                rangeInput[0].value = maxVal - priceGap
+            }else{
+                rangeInput[1].value = minVal + priceGap;
+            }
+        }else{
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+    });
+});

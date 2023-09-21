@@ -243,21 +243,12 @@ header {
             display: flex;
             flex-direction: column;
             gap: 5px;
-            overflow: hidden;
-            height: 0;
-            visibility: hidden;
             transition: all 500ms ease-in;
 
 
 
         }
 
-        &__list.show-list {
-            height: 100%;
-            visibility: visible;
-
-
-        }
 
         &__links {
             padding: .1rem .2rem;

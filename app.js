@@ -27,10 +27,10 @@ const sideNav = document.querySelector('.sideNav')
 
 // console.log(sideNav)
 
-sideNavBtn.addEventListener('click', () => {
-    sideNavList.classList.toggle('show-list')
+// sideNavBtn.addEventListener('click', () => {
+//     sideNavList.classList.toggle('show-list')
 
-})
+// })
 OpenSubLinks.addEventListener('click', () => {
     SubLinksDropDown.classList.toggle('show-sub-links')
 
@@ -343,8 +343,8 @@ getRemainingTime()
 // accordion
 
 
-const shopAccordion = document.querySelectorAll('.shop__accordion')
-const dropDownText = document.querySelectorAll('.shop__accordion--text')
+// const shopAccordion = document.querySelectorAll('.shop__accordion')
+// const dropDownText = document.querySelectorAll('.shop__accordion--text')
 
 // console.log(shopAccordion)
 
