@@ -16,6 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
     <link rel="stylesheet" href="style.css">
     <title>Ashion</title>
 </head>
@@ -281,45 +283,253 @@
 
                 <!-- slider -->
 
-                <!-- <div class="shop__row mb-big">
-                    <h6 class="shop__header heading-2 mb-big">SHOP BY PRICE</h6>
+                <div class="shop__row mb-big">
+                    <h6 class="shop__header heading-2 mb-sm">SHOP BY PRICE</h6>
 
-                    <div class="shop__slider">
-                        <div class="slider">
-                            <div class="progress"></div>
-                        </div>
-                        <div class="range-input">
-                            <input type="range" class="range-min" min="33" max="99" value="33" step="100">
-                            <input type="range" class="range-max" min="33" max="99" value="99" step="100">
-                        </div>
+                    <div class="price-range-slider pd-top-md mb-sm">
+
+
+                        <div id="slider-range" class="range-bar"></div>
+
+                        <p class="range-price">Price:</p>
+                        <p class="range-value">
+                            <input type="text" id="amount" readonly>
+                        </p>
+
                     </div>
 
-                    <div class="price-input">
-                        <div class="field">
-                            <span>Min</span>
-                            <input type="number" class="input-min" value="33">
-                        </div>
-                        <div class="separator">-</div>
-                        <div class="field">
-                            <span>Max</span>
-                            <input type="number" class="input-max" value="99">
-                        </div>
-                    </div>
-                </div> -->
+
+                </div>
 
                 <!-- slider -->
 
                 <!-- checkbox -->
-<div class="shop__row shop__row--1 mb-big">
-    <h6 class="shop__header heading-2 pb-xsm">SHOP BY SIZE </h6>
+                <div class="shop__row shop__row--1 mb-big">
+                    <h6 class="shop__header heading-2 mb-sm">SHOP BY SIZE </h6>
 
-    <div class="checkbox">
-        <input type="checkbox" name="" id=""> <span>XXS</span>
-    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-1" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>XXS</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-2" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>XS</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-3" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>XS-S</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-4" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>S</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-5" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>M</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-6" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>M-L</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-7" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-7">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>L</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-8" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>XL</span>
+                        </label>
+                    </div>
 
-</div>
-                
 
+
+                </div>
+                <div class="shop__row shop__row--1 mb-big">
+                    <h6 class="shop__header heading-2 mb-sm">SHOP BY COLOR </h6>
+
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-1" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>Blacks</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-2" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>Whites</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-3" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>Reds</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-4" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>Greys</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-5" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>Blues</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-6" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>Beige Tones</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-7" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-7">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>Greens</span>
+                        </label>
+                    </div>
+                    <div class="checkbox pb-xsm">
+                        <input id="form-checkbox-8" name="checkbox" type="checkbox">
+                        <label for="form-checkbox-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200">
+                                <mask fill="white" id="checkbox-mask">
+                                    <rect height="200" width="200"></rect>
+                                </mask>
+                                <rect mask="url(#checkbox-mask)" stroke-width="40" height="200" width="200"></rect>
+                                <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"></path>
+                            </svg>
+                            <span>Yellows</span>
+                        </label>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+            <div class="product__gallery">
             </div>
         </div>
         </div>
@@ -428,6 +638,10 @@
         </div>
     </section>
 
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="shoppage.js"></script>
     <script>
@@ -444,6 +658,21 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 
+    <script>
+        $(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 33,
+                max: 99,
+                values: [33, 99],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            });
+            $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+                " - $" + $("#slider-range").slider("values", 1));
+        });
+    </script>
 
 
 </body>
