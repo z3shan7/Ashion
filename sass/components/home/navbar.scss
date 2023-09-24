@@ -51,6 +51,8 @@ header {
         position: relative;
     }
 
+
+
     &__drop-down-list {
         display: flex;
         flex-direction: column;
@@ -229,6 +231,8 @@ header {
 
         }
 
+
+
         &__btn {
             border-radius: 4px;
             background-color: #222;
@@ -280,13 +284,13 @@ header {
             flex-direction: column;
             padding-left: 1.5rem;
             gap: 5px;
-            padding-top: 10px;
-            display: none;
+
+            // display: none;
         }
 
-        &__drop-down-list.show-sub-links {
-            display: flex;
-        }
+        // &__drop-down-list.show-sub-links {
+        //     display: flex;
+        // }
 
         &__sub-links {
 

@@ -7,10 +7,10 @@ const header = document.querySelector('.header');
 
 
 
-dropDownBtn.addEventListener('click', () => {
-    dropDownList.classList.toggle('show-list')
+// dropDownBtn.addEventListener('click', () => {
+//     dropDownList.classList.toggle('show-list')
 
-})
+// })
 
 
 
@@ -31,10 +31,10 @@ const sideNav = document.querySelector('.sideNav')
 //     sideNavList.classList.toggle('show-list')
 
 // })
-OpenSubLinks.addEventListener('click', () => {
-    SubLinksDropDown.classList.toggle('show-sub-links')
+// OpenSubLinks.addEventListener('click', () => {
+//     SubLinksDropDown.classList.toggle('show-sub-links')
 
-})
+// })
 
 openIcon.addEventListener('click', () => {
     sideNav.classList.toggle('show-sideNav')

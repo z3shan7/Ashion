@@ -18,6 +18,26 @@
 
 .shop {
 
+    &__content {
+        display: flex;
+        gap: 25px;
+        // grid-template-columns: 1fr 1fr 1fr;
+        
+        // justify-content: space-between;
+        // align-items: center;
+        // gap: 30px;
+        // overflow: hidden;
+
+    }
+
+    &__categories {
+        flex-basis: 25%;
+    }
+
+    &__gallery {
+        flex-basis: 75%;
+    }
+
 
 
 

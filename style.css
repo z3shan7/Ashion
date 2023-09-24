@@ -436,11 +436,7 @@ header {
       display: flex;
       flex-direction: column;
       padding-left: 1.5rem;
-      gap: 5px;
-      padding-top: 10px;
-      display: none; }
-    .sideNav__drop-down-list.show-sub-links {
-      display: flex; }
+      gap: 5px; }
     .sideNav__sub-links {
       display: block;
       border-radius: 5px;
@@ -1009,6 +1005,16 @@ header {
     font-size: 14px;
     font-weight: 500;
     color: var(--clr-primary-2); }
+
+.shop__content {
+  display: flex;
+  gap: 25px; }
+
+.shop__categories {
+  flex-basis: 25%; }
+
+.shop__gallery {
+  flex-basis: 75%; }
 
 .shop__header {
   position: relative; }
