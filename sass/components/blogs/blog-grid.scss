@@ -3,7 +3,8 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 2rem 2rem;
+    padding-top: 3rem;
+
 
 
     &__icon {
@@ -28,7 +29,7 @@
 
     }
 
- 
+
 
     &__item {
         position: relative;
@@ -56,7 +57,7 @@
             font-weight: 600;
             color: #111111;
 
-   
+
         }
 
         &--list {
@@ -71,7 +72,7 @@
             color: #888888;
             font-weight: 400;
 
-          
+
         }
 
         &--list li:first-of-type::after {
@@ -79,15 +80,16 @@
             content: "|";
             top: 0;
             left: 50%;
-         
-           
+
+
         }
     }
 
 
 
 }
-.load-div{
+
+.load-div {
     text-align: center;
     padding: 3rem 0;
 }
@@ -100,11 +102,16 @@
     padding: 12px 85px 10px;
     font-size: 14px;
     font-weight: 600;
-    
+
 }
 
 
 @media screen and (max-width:1000px) {
+
+    .breadcrumb {
+
+        padding: 2rem 2rem;
+    }
 
     .blog {
 

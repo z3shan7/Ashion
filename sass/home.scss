@@ -64,6 +64,14 @@ body {
     margin-bottom: 50px;
 }
 
+.mb-md {
+    margin-bottom: 30px;
+}
+
+.mb-20px {
+    margin-bottom: 20px;
+}
+
 .mb-sm {
     margin-bottom: 2rem;
 }
@@ -227,5 +235,12 @@ body {
         font-size: 12px;
     }
 
+
+}
+
+@media screen and (max-width:1000px) {
+    .section-center-12x {
+        padding: 2rem 2rem ;
+    }
 
 }
